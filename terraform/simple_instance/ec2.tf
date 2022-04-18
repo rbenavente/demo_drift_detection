@@ -19,7 +19,7 @@ resource "aws_security_group" "ssh_traffic" {
     git_last_modified_by = "63422736+rbenavente@users.noreply.github.com"
     git_modifiers        = "63422736+rbenavente"
     git_org              = "rbenavente"
-    git_repo             = "terragoat"
+    git_repo             = "demo_drift_detection"
     yor_trace            = "1fea1b20-ec93-46fe-8e7a-485a1b6fbef2"
   }
 }
@@ -36,7 +36,7 @@ resource "aws_instance" "web_server_instance" {
     git_last_modified_by = "63422736+rbenavente@users.noreply.github.com"
     git_modifiers        = "63422736+rbenavente"
     git_org              = "rbenavente"
-    git_repo             = "terragoat"
+    git_repo             = "demo_drift_detection"
     yor_trace            = "2b790d6d-94b8-42d0-a6c4-4953d67d593c"
   }
 }
