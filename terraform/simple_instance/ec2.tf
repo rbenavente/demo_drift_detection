@@ -12,6 +12,7 @@ resource "aws_security_group" "ssh_traffic" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+
  }
 
 resource "aws_instance" "web_server_instance" {
@@ -19,6 +20,8 @@ resource "aws_instance" "web_server_instance" {
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
 
+
+  monitoring = true
 }
 
 
