@@ -11,14 +11,22 @@ resource "aws_security_group" "ssh_traffic" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-    
- }
+
+  tags = {
+    Name      = "demo_drift"
+    yor_trace = "4d9e0662-cce8-48ec-9d75-57d03ddf1aef"
+  }
+}
 
 resource "aws_instance" "web_server_instance" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
 
+  tags = {
+    Name      = "demo_drift"
+    yor_trace = "71086834-eb66-403a-a990-655b049739a3"
+  }
 }
 
 
