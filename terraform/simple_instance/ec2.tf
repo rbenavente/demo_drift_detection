@@ -39,7 +39,7 @@ resource "aws_instance" "web_server_instance" {
     git_repo             = "demo_drift_detection"
     yor_trace            = "93f1b09f-ffb1-4497-8e19-8655c607df50"
   }
-  ebs_optimized = true
+  monitoring = true
 }
 
 
