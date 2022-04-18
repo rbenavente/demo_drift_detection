@@ -13,22 +13,12 @@ resource "aws_security_group" "ssh_traffic" {
   }
 
 
-  tags = {
-    Name      = "demo_drift"
-    yor_trace = "16e6e55e-ceb3-4f02-97b3-9d8f59d8a8ec"
-  }
-}
 
 resource "aws_instance" "web_server_instance" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
 
-
-  tags = {
-    Name      = "demo_drift"
-    yor_trace = "cbd38fd1-a541-4a0b-bdc6-900a247f4352"
-  }
 }
 
 
