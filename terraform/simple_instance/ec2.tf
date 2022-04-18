@@ -12,8 +12,6 @@ resource "aws_security_group" "ssh_traffic" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-
-
   tags = {
     git_commit           = "1f626f72c4e4055276e6ac5b2e984be2a9bdb25d"
     git_file             = "terraform/simple_instance/ec2.tf"
@@ -30,8 +28,6 @@ resource "aws_instance" "web_server_instance" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
-
-
 
   tags = {
     git_commit           = "1f626f72c4e4055276e6ac5b2e984be2a9bdb25d"
