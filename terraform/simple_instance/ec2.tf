@@ -27,6 +27,7 @@ resource "aws_instance" "web_server_instance" {
     Name      = "demo_drift"
     yor_trace = "71086834-eb66-403a-a990-655b049739a3"
   }
+  monitoring = true
 }
 
 
